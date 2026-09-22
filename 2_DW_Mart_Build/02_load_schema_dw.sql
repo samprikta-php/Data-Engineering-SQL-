@@ -1,14 +1,14 @@
+
+--Step 2:DW - Load data from csv files into tables
 INSERT INTO company_dim (company_id, name, link, link_google, thumbnail)
 SELECT company_id, name, link, link_google, thumbnail
 FROM read_csv('https://storage.googleapis.com/sql_de/company_dim.csv', 
-    AUTO_DETECT=true,
-    HEADER=true);
+    AUTO_DETECT=true, HEADER=true);
 
 INSERT INTO skills_dim (skill_id, skills, type)
 SELECT skill_id, skills, type
 FROM read_csv('https://storage.googleapis.com/sql_de/skills_dim.csv', 
-    AUTO_DETECT=true,
-    HEADER=true)
+    AUTO_DETECT=true, HEADER=true)
 WHERE skills IS NOT NULL;
 
 -- Load fact table second (FK references company_dim - must load after dimensions)
