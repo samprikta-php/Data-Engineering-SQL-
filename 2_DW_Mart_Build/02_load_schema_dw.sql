@@ -35,14 +35,21 @@ FROM read_csv('https://storage.googleapis.com/sql_de/skills_job_dim.csv',
     HEADER=true);
 
 -- Verify data was loaded correctly
-SELECT 'Company Dimension' AS table_name, COUNT(*) as record_count FROM company_dim
+--SELECT 'Company Dimension' AS table_name, COUNT(*) as record_count FROM company_dim
+--UNION ALL
+--SELECT 'Skills Dimension', COUNT(*) FROM skills_dim
+--UNION ALL
+--SELECT 'Job Postings Fact', COUNT(*) FROM job_postings_fact
+--UNION ALL
+--SELECT 'Skills Job Bridge', COUNT(*) FROM skills_job_dim;
+
+SELECT 'Company Dim' AS table_name, COUNT(*) as record_count FROM company_dim
 UNION ALL
-SELECT 'Skills Dimension', COUNT(*) FROM skills_dim
+SELECT 'Skills Dim', COUNT(*) FROM skills_dim
 UNION ALL
 SELECT 'Job Postings Fact', COUNT(*) FROM job_postings_fact
 UNION ALL
-SELECT 'Skills Job Bridge', COUNT(*) FROM skills_job_dim;
-
+SELECT 'Skills Job Dim', COUNT(*) FROM skills_job_dim;
 
 SELECT '===  Company Dimension Sample ===' AS info;
 SELECT * FROM company_dim LIMIT 5;
