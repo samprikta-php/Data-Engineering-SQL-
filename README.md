@@ -1,3 +1,4 @@
+Exploratory Data Analysis/1_EDA
 <img width="1428" height="1032" alt="Project" src="https://github.com/user-attachments/assets/7e9d5e62-d5fb-4ec8-94d7-dea31f78ddfc" />
 This image is taken from social media platform. As I am following course module to implement this project.
 This project is  SQL project analyzing the data engineer job market using real world job posting data. It showcases my ability to write production-ready SQL, build efficient analytical queries, and translate business questions into actionable, data-driven insights.
