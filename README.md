@@ -13,5 +13,5 @@ This project is  SQL project analyzing the data engineer job market using real w
 
 <img width="1003" height="968" alt="Screenshot 2026-07-29 121511" src="https://github.com/user-attachments/assets/cf193aa1-f2d7-4e47-a85f-a99263a13cf4" />
 
-## 2.Top paying skill: Top Demand Skill
-This is an ongoing project I will update more details soon.
+## 2_WH_Mart_Build/ - Data Pipeline - Data Warehouse & Mart
+<img width="1620" height="768" alt="image" src="https://github.com/user-attachments/assets/5299b027-6224-4418-b4fd-6bd2c784a7c8" />
