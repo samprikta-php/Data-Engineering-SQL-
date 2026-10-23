@@ -11,21 +11,24 @@ Built an end-to-end data engineering pipeline that ingests raw CSV files from Go
  Which skills are most in-demand over time?
  What are hiring trends by company and location?
  How do salary patterns vary by role and skill?
-## Problem : Data teams need a centralized data warehouse to ensure consistent, reliable, and standardized analytics across the organization. They also require specialized data marts that use pre-aggregated data to reduce query complexity, optimize resource utilization, and improve performance for frequently used analytical queries.
+# Challenge :
+Data teams need a centralized data warehouse to ensure consistent, reliable, and standardized analytics across the organization. They also require specialized data marts that use pre-aggregated data to reduce query complexity, optimize resource utilization, and improve performance for frequently used analytical queries.
 
-# Solution: Develop an end-to-end ETL pipeline to extract CSV files from Google Cloud Storage, transform and normalize the data into a star schema data warehouse with separate fact and dimension tables, and build specialized data marts for flat queries, skill demand analysis, and priority role tracking to improve query performance and support targeted business insights.
+# Solution:
+Develop an end-to-end ETL pipeline to extract CSV files from Google Cloud Storage, transform and normalize the data into a star schema data warehouse with separate fact and dimension tables, and build specialized data marts for flat queries, skill demand analysis, and priority role tracking to improve query performance and support targeted business insights.
 
 ## Pipeline Architecture-
 <img width="1620" height="768" alt="image" src="https://github.com/user-attachments/assets/c723c56b-960c-48ad-a77a-e58b3205a6a8" />
 
-🧰 Technology Used:
-☁️ Data Source: Google Cloud Storage (GCS) for storing raw job posting data in CSV format.
-🦆 Analytical Database: DuckDB for high-performance analytical processing, with the httpfs extension enabling access to files stored in GCS.
-💻 Query Language: SQL for creating database structures, ingesting raw data, transforming datasets, and building analytical tables.
-🏗️ Data Architecture: Star schema design using fact, dimension, and bridge tables to organize job market data for efficient analysis.
-🛠️ Development Environment: Visual Studio Code for writing and maintaining SQL scripts, alongside the DuckDB CLI for executing database operations.
-⚙️ ETL Automation: A centralized master SQL script to coordinate data extraction, transformation, loading, and data mart creation.
-🔄 Source Control: Git and GitHub for versioning SQL scripts, tracking modifications, and maintaining the project codebase.
+🧰 Technology Used:  
+
+☁️ Data Source: Google Cloud Storage (GCS) for storing raw job posting data in CSV format.  
+🦆 Analytical Database: DuckDB for high-performance analytical processing, with the httpfs extension enabling access to files stored in GCS.  
+💻 Query Language: SQL for creating database structures, ingesting raw data, transforming datasets, and building analytical tables.  
+🏗️ Data Architecture: Star schema design using fact, dimension, and bridge tables to organize job market data for efficient analysis.  
+🛠️ Development Environment: Visual Studio Code for writing and maintaining SQL scripts, alongside the DuckDB CLI for executing database operations.  
+⚙️ ETL Automation: A centralized master SQL script to coordinate data extraction, transformation, loading, and data mart creation.  
+🔄 Source Control: Git and GitHub for versioning SQL scripts, tracking modifications, and maintaining the project codebase.  
 
 <img width="1620" height="768" alt="image" src="https://github.com/user-attachments/assets/736fbe7e-4b39-4fa8-af1b-f2cefa1833bf" />
 
