@@ -33,4 +33,4 @@ Develop an end-to-end ETL pipeline to extract CSV files from Google Cloud Storag
 
 ### Data Warehouse
 The data warehouse follows a star schema architecture, comprising `company_dim`, `skills_dim`, `job_postings_fact`, and `skills_job_dim` tables to organize job posting data and enable efficient, structured analytical queries.
-https://github.com/lukebarousse/SQL_Data_Engineering_Course
+
