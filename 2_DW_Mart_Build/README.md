@@ -32,5 +32,14 @@ Develop an end-to-end ETL pipeline to extract CSV files from Google Cloud Storag
 
 
 ### Data Warehouse
-The data warehouse follows a star schema architecture, comprising `company_dim`, `skills_dim`, `job_postings_fact`, and `skills_job_dim` tables to organize job posting data and enable efficient, structured analytical queries.
+The data warehouse follows a star schema architecture, comprising `company_dim`, `skills_dim`, `job_postings_fact`, and `skills_job_dim` tables to organize job posting data and enable efficient, structured analytical queries. 
+<img width="1586" height="1254" alt="1_2_Data_Warehouse" src="https://github.com/user-attachments/assets/b7bb839b-0121-468a-91a7-eec71e6631d8" />
 
+SQL Files:
+
+- `01_create_tables_dw.sql` – Creates the data warehouse star schema with four core tables.
+- `02_load_schema_dw.sql` – Extracts CSV files from Google Cloud Storage (GCS) and loads the data into the warehouse tables.
+
+Purpose: Establishes a centralized, reliable source of truth for analytical queries using a star schema.
+
+Grain: One row per job posting in the `job_postings_fact` table.
