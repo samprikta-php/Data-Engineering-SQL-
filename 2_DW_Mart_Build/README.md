@@ -30,7 +30,6 @@ Develop an end-to-end ETL pipeline to extract CSV files from Google Cloud Storag
 ⚙️ ETL Automation: A centralized master SQL script to coordinate data extraction, transformation, loading, and data mart creation.  
 🔄 Source Control: Git and GitHub for versioning SQL scripts, tracking modifications, and maintaining the project codebase.  
 
-<img width="1620" height="768" alt="image" src="https://github.com/user-attachments/assets/736fbe7e-4b39-4fa8-af1b-f2cefa1833bf" />
 
 ### Data Warehouse
 The data warehouse follows a star schema architecture, comprising `company_dim`, `skills_dim`, `job_postings_fact`, and `skills_job_dim` tables to organize job posting data and enable efficient, structured analytical queries.
