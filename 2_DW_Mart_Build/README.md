@@ -144,11 +144,31 @@ Key Features: Implements `MERGE` operations for incremental data updates, demons
 
 - Implements `CASE WHEN` expressions to convert categorical attributes into aggregatable flags, including remote work availability, health insurance benefits, and degree requirements.
 
-Data Quality & Production Practices
-Idempotency: All scripts safely rerunnable without side effects
-Data Validation: Verification queries at each pipeline step to ensure data integrity
-Type Safety: Proper data type definitions (VARCHAR, INTEGER, DOUBLE, BOOLEAN, TIMESTAMP)
-Schema Organization: Separate schemas (flat_mart, skills_mart, priority_mart, company_mart) for logical separation
-Error Handling: Structured script execution with clear error messages and progress reporting
+## Data Quality & Production-Ready Practices
+
+1. Idempotent Pipeline Execution
+
+- Designs scripts to be safely re-executed without creating duplicate records or unintended side effects.
+- Ensures consistent results across repeated pipeline runs.
+
+2. Data Validation & Integrity
+
+- Incorporates validation queries at each stage of the pipeline to verify data accuracy, consistency, and completeness.
+- Helps identify data quality issues early in the transformation process.
+
+3. Data Type Management
+
+- Defines appropriate data types, including `VARCHAR`, `INTEGER`, `DOUBLE`, `BOOLEAN`, and `TIMESTAMP`, to ensure data consistency and type safety.
+
+4. Schema Organization
+
+- Organizes database objects into dedicated schemas (`flat_mart`, `skills_mart`, `priority_mart`, and `company_mart`) for better modularity, maintainability, and logical separation.
+
+5. Error Handling & Execution Monitoring
+
+- Structures SQL script execution with clear error reporting and progress indicators.
+- Improves pipeline traceability, troubleshooting, and operational reliability.
+
+
 
 
