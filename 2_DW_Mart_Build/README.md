@@ -42,4 +42,6 @@ SQL Files:
 
 Purpose: Establishes a centralized, reliable source of truth for analytical queries using a star schema.
 
-Grain: One row per job posting in the `job_postings_fact` table.
+Grain: One row per job posting in the `job_postings_fact` table.  
+Priority Mart
+Priority role tracking with incremental updates using MERGE operations.
