@@ -43,15 +43,26 @@ SQL Files:
 Purpose: Establishes a centralized, reliable source of truth for analytical queries using a star schema.
 
 Grain: One row per job posting in the `job_postings_fact` table.  
+FLAT MART:
+<img width="1656" height="1248" alt="1_2_Flat_Mart" src="https://github.com/user-attachments/assets/f97b7688-f813-4ba3-b26f-9018df708104" />
+SQL File: `03_create_flat_mart.sql` – Creates a consolidated, denormalized table by joining all relevant dimensions.
 
+Purpose: Provides a unified, query-ready dataset for efficient ad-hoc analysis and reporting.
+
+Grain: One row per job posting, enriched with all associated dimensional attributes.
+<img width="1644" height="728" alt="1_2_Skills_Mart" src="https://github.com/user-attachments/assets/4c4a63e1-34e9-4d8a-af8a-b780f5d5b358" />
+
+A consolidated, denormalized table containing all relevant dimensional attributes to enable simplified and flexible ad-hoc querying.
 Priority Mart
 Priority role tracking with incremental updates using MERGE operations.
 <img width="1976" height="1316" alt="1_2_Priority_Mart" src="https://github.com/user-attachments/assets/015f1e2b-be2a-4dff-adbd-34f11a50e889" />
 SQL Files:
 05_create_priority_mart.sql – Initial build of priority roles and jobs snapshot
-06_update_priority_mart.sql – Incremental update using MERGE (upsert pattern)
+06_update_priority_mart.sql – Incremental update using MERGE (upsert pattern)  
+
 Purpose: Maintain a prioritized record of job postings and track job snapshot changes over time.
 
 Grain: One row per job posting, with an assigned priority level.
 
 Key Features: Implements `MERGE` operations for incremental data updates, demonstrating production-ready upsert patterns that support `INSERT`, `UPDATE`, and `DELETE` operations within a single statement.
+
