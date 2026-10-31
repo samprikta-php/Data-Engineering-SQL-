@@ -46,3 +46,12 @@ Grain: One row per job posting in the `job_postings_fact` table.
 
 Priority Mart
 Priority role tracking with incremental updates using MERGE operations.
+<img width="1976" height="1316" alt="1_2_Priority_Mart" src="https://github.com/user-attachments/assets/015f1e2b-be2a-4dff-adbd-34f11a50e889" />
+SQL Files:
+05_create_priority_mart.sql – Initial build of priority roles and jobs snapshot
+06_update_priority_mart.sql – Incremental update using MERGE (upsert pattern)
+Purpose: Maintain a prioritized record of job postings and track job snapshot changes over time.
+
+Grain: One row per job posting, with an assigned priority level.
+
+Key Features: Implements `MERGE` operations for incremental data updates, demonstrating production-ready upsert patterns that support `INSERT`, `UPDATE`, and `DELETE` operations within a single statement.
