@@ -66,3 +66,89 @@ Grain: One row per job posting, with an assigned priority level.
 
 Key Features: Implements `MERGE` operations for incremental data updates, demonstrating production-ready upsert patterns that support `INSERT`, `UPDATE`, and `DELETE` operations within a single statement.
 
+## Data Engineering Skills Demonstrated
+
+1. ETL Pipeline Development
+
+- Extract: Loads raw CSV files directly from Google Cloud Storage using DuckDB's `httpfs` extension.
+- Transform: Performs data cleaning, normalization, data type conversions (`CAST`, `DATE_TRUNC`), and quality filtering.
+- Load: Implements repeatable and idempotent table creation using `DROP TABLE IF EXISTS` patterns.
+
+2. Incremental Data Processing
+
+- Implements `MERGE` statements to handle incremental data updates through `INSERT`, `UPDATE`, and `DELETE` operations within a single statement.
+- Ensures efficient synchronization of target tables with updated source data.
+
+3. Pipeline Orchestration
+
+- Uses a master SQL script (`build_dw_marts.sql`) to coordinate and execute the complete data pipeline.
+- Automates the execution of data warehouse transformation and mart-building processes.
+
+## Dimensional Modeling Skills Demonstrated
+
+1. Star Schema Design
+
+- Designs a dimensional data model with a central fact table (`job_postings_fact`) connected to dimension tables such as `company_dim` and `skills_dim`.
+- Establishes clear relationships between fact and dimension tables to support analytical queries.
+
+2. Bridge Table Implementation
+
+- Handles many-to-many relationships using bridge tables such as `skills_job_dim`, `bridge_company_location`, and `bridge_job_title`.
+- Enables flexible analysis across multiple business dimensions.
+
+3. Grain Definition
+
+- Defines clear fact table granularity to ensure accurate data representation at different levels of analysis, including:
+
+- Skill + Month
+- Company + Job Title + Location + Month
+
+4. Additive Measures
+
+- Implements additive metrics, including counts and sums, that can be consistently aggregated across relevant dimensions.
+
+5. Surrogate Key Generation
+
+- Demonstrates sequential surrogate key generation using CTEs and self-joins.
+- Applies this approach optionally during the `company_mart` build process.
+
+
+## Advanced SQL Techniques Demonstrated
+
+1. DDL (Data Definition Language) Operations
+
+- Uses `CREATE TABLE`, `DROP TABLE`, and `CREATE SCHEMA` to manage database structures and organize data warehouse objects.
+
+2. DML (Data Manipulation Language) Operations
+
+- Implements `INSERT INTO ... SELECT` statements with explicit column mapping to load and transform data from CSV sources.
+
+3. MERGE Operations
+
+- Implements incremental data processing using `MERGE INTO` with `WHEN MATCHED`, `WHEN NOT MATCHED`, and `WHEN NOT MATCHED BY SOURCE` clauses.
+- Demonstrates production-ready upsert patterns to handle inserts, updates, and deletions within a single statement.
+
+4. Common Table Expressions (CTEs)
+
+- Uses CTEs to structure complex SQL transformations, simplify query logic, and convert categorical values into boolean flags.
+
+5. Date and Time Functions
+
+- Applies `DATE_TRUNC('month')` and `EXTRACT(quarter)` to create time-based dimensions and support temporal analysis.
+
+6. String Manipulation Functions
+
+- Uses `STRING_AGG` to concatenate values and `REPLACE` to clean and standardize string data.
+
+7. Conditional and Boolean Logic
+
+- Implements `CASE WHEN` expressions to convert categorical attributes into aggregatable flags, including remote work availability, health insurance benefits, and degree requirements.
+
+Data Quality & Production Practices
+Idempotency: All scripts safely rerunnable without side effects
+Data Validation: Verification queries at each pipeline step to ensure data integrity
+Type Safety: Proper data type definitions (VARCHAR, INTEGER, DOUBLE, BOOLEAN, TIMESTAMP)
+Schema Organization: Separate schemas (flat_mart, skills_mart, priority_mart, company_mart) for logical separation
+Error Handling: Structured script execution with clear error messages and progress reporting
+
+
