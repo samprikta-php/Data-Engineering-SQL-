@@ -19,11 +19,26 @@ This project is  SQL project analyzing the data engineer job market using real w
 
 <img width="1003" height="968" alt="Screenshot 2026-07-29 121511" src="https://github.com/user-attachments/assets/cf193aa1-f2d7-4e47-a85f-a99263a13cf4" />
 
-How to Run SQL  
-Option 1: Cloud (Easiest to get started) — MotherDuck  
-Sign up for MotherDuck (free): lukeb.co/motherduck  
-Use MotherDuck Studio in your browser — no installation required  
-Attach the course database by running this command:  
-ATTACH 'md:_share/data_jobs/87603155-cdc7-4c80-85ad-3a6b0d760d93'  
-For running project files: Not recommended — the cloud UI works like a Jupyter notebook (run queries cell-by-cell; no direct file execution). Best for ad hoc analysis. To run full project files, use Option 2 below.
+## How to Run SQL – Option 1: Cloud-Based Setup (MotherDuck)
+
+MotherDuck – Easiest Way to Get Started
+
+1. Sign up for a free account on [MotherDuck](<https://lukeb.co/motherduck?utm_source=chatgpt.com>).
+2. Open MotherDuck Studio directly in your browser. No local installation is required.
+3. Connect to the course database by executing the following SQL command:
+
+sql
+
+```sql
+ATTACH 'md:_share/data_jobs/87603155-cdc7-4c80-85ad-3a6b0d760d93';
+```
+
+Running Project Files
+
+- MotherDuck Studio provides an interactive, notebook-style SQL environment.
+- Execute queries individually, cell by cell.
+- Direct execution of complete project files is not recommended.
+- Best suited for ad hoc SQL analysis, experimentation, and exploring datasets.
+
+Recommendation: Use MotherDuck for quick SQL exploration and analysis. For executing complete project files and managing end-to-end workflows, use Option 2 (Local Setup).
 
