@@ -9,6 +9,6 @@ Key SQL Files to Review
 
 If you have limited time, start with these three queries:
 
-01_top_demanded_skills.sql – Identifies the most in-demand skills based on job posting frequency.
-02_top_paying_skills.sql – Analyzes salary data to identify the highest-paying technical skills.
-03_optimal_skills.sql – Combines skill demand and salary insights to identify the most valuable skills for career growth.
+01_top_demanded_skills.sql – Identifies the most in-demand skills based on job posting frequency.  
+02_top_paying_skills.sql – Analyzes salary data to identify the highest-paying technical skills.  
+03_optimal_skills.sql – Combines skill demand and salary insights to identify the most valuable skills for career growth.  
