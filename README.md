@@ -19,11 +19,11 @@ This project is  SQL project analyzing the data engineer job market using real w
 
 <img width="1003" height="968" alt="Screenshot 2026-07-29 121511" src="https://github.com/user-attachments/assets/cf193aa1-f2d7-4e47-a85f-a99263a13cf4" />
 
-How to Run SQL
-Option 1: Cloud (Easiest to get started) — MotherDuck
-Sign up for MotherDuck (free): lukeb.co/motherduck
-Use MotherDuck Studio in your browser — no installation required
-Attach the course database by running this command:
-ATTACH 'md:_share/data_jobs/87603155-cdc7-4c80-85ad-3a6b0d760d93'
+How to Run SQL  
+Option 1: Cloud (Easiest to get started) — MotherDuck  
+Sign up for MotherDuck (free): lukeb.co/motherduck  
+Use MotherDuck Studio in your browser — no installation required  
+Attach the course database by running this command:  
+ATTACH 'md:_share/data_jobs/87603155-cdc7-4c80-85ad-3a6b0d760d93'  
 For running project files: Not recommended — the cloud UI works like a Jupyter notebook (run queries cell-by-cell; no direct file execution). Best for ad hoc analysis. To run full project files, use Option 2 below.
 
